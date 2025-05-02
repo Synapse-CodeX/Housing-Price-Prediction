@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Housing Price Predictor</title>
+</head>
+<body>
+    <h2>Enter Housing Data</h2>
+    <form action="/predict" method="POST">
+        <input name="longitude" placeholder="Longitude" required><br>
+        <input name="latitude" placeholder="Latitude" required><br>
+        <input name="housing_median_age" placeholder="Housing Median Age" required><br>
+        <input name="total_rooms" placeholder="Total Rooms" required><br>
+        <input name="total_bedrooms" placeholder="Total Bedrooms" required><br>
+        <input name="population" placeholder="Population" required><br>
+        <input name="households" placeholder="Households" required><br>
+        <input name="median_income" placeholder="Median Income" required><br>
+        
+        <label>Ocean Proximity:</label>
+        <select name="ocean_proximity" required>
+            <option value="INLAND">INLAND</option>
+            <option value="NEAR BAY">NEAR BAY</option>
+            <option value="NEAR OCEAN">NEAR OCEAN</option>
+            <option value="ISLAND">ISLAND</option>
+            <option value="<1H OCEAN">&lt;1H OCEAN</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
