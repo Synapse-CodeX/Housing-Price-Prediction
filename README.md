@@ -1,4 +1,4 @@
-  
+   
 # Housing Price Prediction Web App
 
 This project is a machine learning web application that predicts housing prices based on several features, such as geographical data, median income, number of rooms, etc. The model is built using a dataset of California housing prices and deployed via a Flask web app.
