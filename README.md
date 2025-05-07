@@ -5,7 +5,7 @@ This project is a machine learning web application that predicts housing prices 
 
 ---
 
-## Table of Contents 
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
